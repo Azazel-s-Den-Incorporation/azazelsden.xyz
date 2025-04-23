@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Connect</title>
+    <meta property="og:title" content="Azazel's Den" />
+    <meta name="description" content="Azazel's Den" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link href="/office/storageroom/bin/styles.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+          $("#header").load("/office/storageroom/elements/header.html"); 
+          $("#footer").load("/office/storageroom/elements/footer.html");  
+          $("#sidebar").load("/office/storageroom/elements/sidebar.html");
+        });
+    </script> 
+  </head>
+  <body>
+    <header id="header"></header>
+    <div class="window">
+    <div class="row">
+      <div id="sidebar" class="sidebar"></div>
+      <span class="column" width="100%">
+        <div class="container-light">
+          <span class="row">
+            <span class="column" margin="2px">
+              <form method="post" action="login.php">
+                <h3>Login</h3>
+                <p>Username</p>
+                <input type="text" name="username" required>
+                <p>Password</p>
+                <input type="password" name="password" required>
+                <input type="submit" name="login">
+                <a href="google-oauth.php" class="gl-btn">
+                  <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
+                  Login with Google
+                </a>
+              </form>
+            </span>
+            <span class="column" margin="2px">
+              <h3>Register</h3>
+              <form method="post" action="register.php">
+                <p>Username</p>
+                <input type="text" name="username" required>
+                <p>Email</p>
+                <input type="email" name="username" required>
+                <p>Password</p>
+                <input type="password" name="password" required>
+                <input type="password" name="password-re" required>
+                <p><input type="checkbox" name="agree" required> I have read and agree to the <a href="/terms-of-service/">Terms of Service</a>.</p>
+                <input type="submit" name="register" id="register">
+              </form>
+            </span>
+          </span>
+        </div>
+        <div class="row">
+          <div class="container-flex">
+            <iframe src="https://discord.com/widget?id=1228391170175144028&theme=dark" width="350" height="450" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+          <span class="container-light"><div class="column">
+            <a href="https://twitter.com/WolfgangAzazelM"><span class="row">
+              <img src="/office/storageroom/bin/media/xitter.jpg" class="icon3"/><h1>Xitter</h1>
+            </span></a>
+            <a href="https://www.youtube.com/channel/UCQDCv0cYrpABniC2buGYZ5w"><span class="row">
+              <img src="/office/storageroom/bin/media/yt.png" class="icon3"/><h1>YouTube</h1>
+            </span></a>
+            <a href="https://t.me/AzazelMango"><span class="row">
+              <img src="/office/storageroom/bin/media/tg.jpg" class="icon3"/><h1>Telegram</h1>
+            </span></a>
+          </div></span>
+        </div>
+        <span class="container-light">
+          <p>
+            The Discord server and the Xitter account are both age restricted to individuals of 18 years of age or older.
+          </p>
+        </span>
+        <a href="/office/filingcabinet/diamondak/egg.html"><p>🥚</p></a>
+      </span>
+	  </div>
+    </div>
+    <footer id="footer"></footer>
+  </body>
+</html>
