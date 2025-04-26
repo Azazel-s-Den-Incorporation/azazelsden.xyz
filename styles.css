@@ -3,17 +3,21 @@
     html {margin: 0; height: 100%;}
     .row {display: flex; flex-flow: row nowrap; align-content: center; overflow: visible; height: fit-content; width: 100%;}
     .column {display: flex; align-content: center; flex-flow: column nowrap;overflow:  visible; height: fit-content;max-width: 100%;}
-    header {max-width: 100%; height: 8%; padding: 1px; padding-right: 5px; padding-left: 5px; background-color: #960000; display: flex; flex-flow: row nowrap; justify-content: space-around; justify-items: center; align-items: center;}
-    footer {width: 100vw; height: 13%; padding-bottom: 10px; padding-left: 5px; background-color: #666666; display: flex; flex-flow: row nowrap; justify-content: space-around; justify-items: center; align-items: center;}
-    div.sidebar {max-width: 18%; min-width: 10%; min-height: auto; padding: 5px; background-color: #1a1a7e; display: flex; flex-flow: column nowrap; overflow-x: hidden; overflow-y: visible;}
+    #header {max-width: 100%; height: 8%; padding: 1px; padding-right: 5px; padding-left: 5px; background-color: #960000; display: flex; flex-flow: row nowrap; justify-content: space-around; justify-items: center; align-items: center;}
+    #footer {width: 100vw; height: 13%; padding-bottom: 10px; padding-left: 5px; background-color: #666666; display: flex; flex-flow: row nowrap; justify-content: space-around; justify-items: center; align-items: center;}
+    #sidebar {max-width: 18%; min-width: 10%; min-height: auto; padding: 5px; background-color: #1a1a7e; display: flex; flex-flow: column nowrap; overflow-x: hidden; overflow-y: visible;}
     body {line-height: 1.15; color: #fff; background-size: cover;  background-repeat: no-repeat;  background-attachment: fixed; background-position: center;  background-color: #000; display: flex; margin: 0;  flex-direction: column; overflow: hidden; justify-self: auto; height: 100%;}
-    .window { height: 100%;display: flex; flex-flow: row nowrap; background-color: #000000; place-items: stretch; overflow-y: visible; overflow-x: hidden; overflow-wrap: break-word; margin: 0; min-width: 70%; width: auto;}
-    .navbar {display: flex; flex-direction: column; gap: 2px; flex-wrap: nowrap; align-items: center;}
-	.navbaradmin {display: flex; align-items: center; flex-direction: row; background-color: #aaa; min-height: fit-content;}
-	.navlinks-header {overflow: hidden; display: flex; flex-flow: row nowrap; align-items: center; min-width: fit-content;}
-	.navlinks-footer {flex-flow: row nowrap; display: flex; align-items: center; overflow: hidden; min-width: fit-content;}
-	.navlink-header {height: 18px; min-width: fit-content; padding: 15px; color: #fff; font-size: 18px; font-weight: bold; float: left; border-right:1px solid #bbb; background-color: #3333;}
-	.navlink-footer {float: left; border:1px solid #bbb; background-color: #3333; padding: 6px; height: 10px; color: black; font-size: 10px; font-weight: bold; min-width: fit-content;}
+    #mainWindow {height: 100%;display: flex; flex-flow: row nowrap; background-color: #000000; place-items: stretch; overflow-y: hidden; overflow-x: hidden; overflow-wrap: break-word; margin: 0; min-width: 70%; width: auto;}
+    #content {min-height: auto; display: flex; flex-flow: row nowrap; background-color: #000000; place-items: stretch; overflow-y: visible; overflow-x: hidden; overflow-wrap: break-word; margin: 0; min-width: 70%; width: auto;}
+    #accessWindow {width: 100%; height: 100%; padding: 20px; justify-content: center; align-content: center; display: flex; flex-flow: row wrap;}
+    
+    
+    #navbar {display: flex; flex-direction: column; gap: 2px; flex-wrap: nowrap; align-items: center;}
+	#navbaradmin {display: flex; align-items: center; flex-direction: row; background-color: #aaa; min-height: fit-content;}
+	#navlinks-header {overflow: hidden; display: flex; flex-flow: row nowrap; align-items: center; min-width: fit-content;}
+	#navlinks-footer {flex-flow: row nowrap; display: flex; align-items: center; overflow: hidden; min-width: fit-content;}
+	#navlink-header {height: 18px; min-width: fit-content; padding: 15px; color: #fff; font-size: 18px; font-weight: bold; float: left; border-right:1px solid #bbb; background-color: #3333;}
+	#navlink-footer {float: left; border:1px solid #bbb; background-color: #3333; padding: 6px; height: 10px; color: black; font-size: 10px; font-weight: bold; min-width: fit-content;}
 	.navlink:last-child {border-right: none;}
 	.navlink a {display: block; color: #fff; text-align: center; text-decoration: none;}
 	.navlink:hover:not(.active) {background-color: #111;}
@@ -34,7 +38,7 @@
     .card-flex:hover {background-color: #151515;}
     .card-fill {height: auto; display: flex; flex-flow: column wrap; align-content: center; align-items: center; padding: 5px; background-color: #666; transition-duration: 0.2s; transition-timing-function: ease-in-out;}
     /*Media*/
-    .icon {width: 32px; height: 32px; padding: 2px;}
+    .icon1 {width: 32px; height: 32px; padding: 2px;}
     .icon2 {width: 64px; height: 64px; padding: 2px;}
     .icon3 {width: 128px; height: 128px; padding: 2px;}
     .icon4 {width: 256px; height: 256px; padding: 2px;}
@@ -57,10 +61,10 @@
     a:hover {color: #333; font-family: monospace; text-decoration: none;}
     a:active {color: #99d; font-family: monospace; text-decoration: none;}
 	input {min-width: 100%; min-height: 25px; margin: 5px; }
-	.textarea input {min-width: 100%; min-height: 25px; margin: 5px;}
-	.button input {min-width: fit-content; min-height: 25px; margin: 5px; transition-duration: 0.2s; transition-timing-function: ease-in-out;}
-	.button:hover input {transform: scale(1.05);}
-	.radio input {min-width: 100%; min-height: 25px; margin: 5px;}
+	.textarea {min-width: 100%; min-height: 25px; margin: 5px;}
+	.button {min-width: fit-content; min-height: 25px; margin: 5px; transition-duration: 0.2s; transition-timing-function: ease-in-out;}
+	.button:hover {transform: scale(1.05);}
+	.radio {min-width: 100%; min-height: 25px; margin: 5px;}
     /*Tables*/
     table {border: 3px solid #600; border-width: 3px; display: flex; align-content: center; padding: 5px;}
     tr {border: 1px solid #600; border-width: 3px;}
