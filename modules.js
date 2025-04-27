@@ -1,67 +1,78 @@
 "use strict";
 
-function homePage() {
-    const content = document.getElementById("content");
+// modules.js is for the purpose of:
+  // defining the html code for each set of elements displayed on pages
+//
+
+// Find Codes
+  // Headers - hdrs
+    // Main Header - mhdr
+    // 
+  // Sidebars - sbrs
+    // Main Sidebar - msbr
+    // Profile Sidebar - psbr
+    // Staff Sidebar - fsbr
+    // Support Sidebar - ssbr
+  // Footers - ftrs
+    // Main Footer - mftr
+  // Posts - psts
+    // 
+  // Direct Messages - dmsgs
+    // List Chats - lchts
+    // Message Feed - fmsgs
+// 
+
+// Headers - hdrs
+  // Main Header - mhdr
+    function headerContentMain() {
+        const content = document.getElementById("header");
+        content.innerHTML = `
+        <!--*logo-->
+        <img src="/bin/images/ADI.png" loading="eager" class="logo clickable" onclick="window.open('/', '_self')"/>
+            
+        <!--*pretty self-explanatory-->
+        <h1 class="notClickable">Azazel's Den Incorporation</h1>   
+        `;
+    };
+  
+  
+  
+//
+
+// Sidebars - sbrs
+    function sidebarContentMain() {
+    const content = document.getElementById("sidebar");
     content.innerHTML = `
-    <div class="column">
-        <span class="container-light">
-		      <h1>
-            Welcome to Azazel's Den!
-          </h1>
-          <h3>
-            This is the place where I will be displaying all my work, where to find me and how you could help support me by either commissioning or donating to me. <br>
-            Feel free to look around and stay a while!🤭 Note: this site is still under construction!  
-          </h3>
+        <h3>Welcome!</h3>
+        <ul>
+        <li id="sidebarHome" onclick="linkHome()">Home</li>
+        <li id="sidebarAccess" onclick="accessLink()">Access</li>
+        <li id="sidebarPosts" onclick="postsLink()">Posts</li>
+        <li id="sidebarContact" onclick="contactPage()">Contact</li>
+        <li id="sidebarAbout" onclick="aboutPage()">About</li>
+        <li id="sidebarTerms" onclick="termsPage()">Terms of Service</li>
+        <li id="sidebarPrivacy" onclick="privacyPage()">Privacy Policy</li>
+        <li id="sidebarButton" onclick="document.getElementById('cheese').play();">Button!</li>
+        </ul>
+        <audio id="cheese" src="/bin/audio/cheese.wav"></audio>    
+    `;
+    };
+
+// Footers - ftrs
+    function footerContentMain() {
+    const content = document.getElementById("footer");
+    content.innerHTML = `
+        <span>
+        <a href="/">
+            <img alt="logo" src="/bin/images/azazelsdenincorporation.png" class="logo" />
+        </a>
         </span>
-        <div class="row">
-          <a href="https://discord.gg/AA2yBsMwNx" class="container-light">
-            <h2>
-              Check out our Discord Server!
-            </h2>
-            <h3>
-              This server is an 18+ only server!<br>
-              IDs must be provided upon request.
-            </h3>
-            <img class="thumbnail" src="/bin/media/discord.svg"/>
-          </a>
-          <a href="https://map.azazelsden.xyz" class="container-light">
-            <h2>
-              Map Builder
-            </h2>
-            <h3>
-              A fork of Azgaar's Fantasy Map Generator.
-            </h3>
-          </a>
-          <a href="https://github.com/AzazelMango/azmap" class="container-light">
-            <h2>
-              Map GitHub
-            </h2>
-            <h3>
-              Github link for the Map.
-            </h3>
-          </a>
-          
-        </div>
-        <p><a class="easteregg" href="/office/filingcabinet/blueday/cheese.html">🧀</a></p>
-      </div>
+        <h5>
+        Azazel's Den Incorporation is not a registered corporation and acts as a sole proptietorship<br>
+        under the authority of Azazel WDS Mango.<br>
+        All content on this website is protected under copyright, all rights reserved.
+        </h5>
     `;
-};
+    };
 
-function aboutPage() {
-    const content = document.getElementById("content");
-    content.innerHTML = `
-    <div class="container">OwO</div>
-    `;
-};
-
-function blankPage() {
-    const content = document.getElementById("content");
-    content.innerHTML = `
-    
-    `;
-};
-
-function accessPage() {
-  const access = "/access";
-  window.location.replace(access);
-};
+// Posts psts
